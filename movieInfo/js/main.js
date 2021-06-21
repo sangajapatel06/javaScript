@@ -1,4 +1,4 @@
-require('dotenv').config()
+// require('dotenv').config()
 
 $(document).ready(() => {
     $('#searchForm').on('submit', (e) => {
@@ -9,7 +9,7 @@ $(document).ready(() => {
   });
   
   function getMovies(searchText){
-    axios.get('http://www.omdbapi.com?s='+ searchText+'&apikey=process.env.API_KEY')
+    axios.get('http://www.omdbapi.com?s='+ searchText+'&apikey=******')
       .then((response) => {
         console.log(response);
         let movies = response.data.Search;
@@ -42,7 +42,7 @@ $(document).ready(() => {
   function getMovie(){
     let movieId = sessionStorage.getItem('movieId');
   
-    axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=c4691e4e'+movieId)
+    axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=****'+movieId)
       .then((response) => {
         console.log(response);
         let movie = response.data;
